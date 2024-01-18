@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://www.frontendmentor.io/solutions/responsive-and-functional-solution-using-css-grid-and-flexbox-K0koywL-sy)
-- Live Site URL: (daniilgurski.github.io/FM-todo/)
+- Live Site URL: (https://daniilgurski.github.io/FM-todo/)
 
 
 ## My process
