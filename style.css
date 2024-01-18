@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
+:root {
+    --clr-primary-600: hsl(220, 98%, 61%);
+
+    --clr-neutral-700: hsl(235, 19%, 35%);
+    --clr-neutral-600: hsl(236, 9%, 61%);
+    --clr-neutral-200: hsl(233, 11%, 84%);
+    --clr-neutral-100: hsl(236, 33%, 92%);
+    --clr-neutral-50: hsl(0, 0%, 98%);
+
+    /* dark theme palette */
+    --da-clr-neutral-900: hsl(235, 21%, 11%);
+    --da-clr-neutral-890: hsl(235, 24%, 19%);
+    --da-clr-neutral-800: hsl(237, 14%, 26%);
+    --da-clr-neutral-700: hsl(233, 14%, 35%);
+    --da-clr-neutral-500: hsl(234, 11%, 52%);
+    --da-clr-neutral-200: hsl(234, 39%, 85%);
+    --da-clr-neutral-100: hsl(236, 33%, 92%); 
+
+    --ff-primary: 'Josefin Sans', sans-serif;
+    --ff-body: var(--ff-primary);
+
+    --fs-xl: 2rem;
+    --fs-120: 1.2rem;
+    --fs-100: 1.125rem;
+    --fs-90: 0.9rem;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+} 
+
+
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+    line-height: calc(1em + 0.5rem);
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+
+/* 
+8. Link reset 
+*/
+a {
+    text-decoration: none; 
+    color: currentColor;
+}
+
+
+/* 
+9. Full height 
+*/
+html,
+body {
+    height: 100%;
+}
+
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+
+/* General styling */
+body {
+    --_bg-color: var(--clr-neutral-100);
+
+    background-color: var(--_bg-color);
+    font-family: var(--ff-body);
+    font-size: var(--fs-100);
+}
+
+
+.button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: currentColor;
+}
+
+
+.button:hover {
+    color: var(--_task-primary-clr);
+}
+
+
+/* Show the color of the selection on the button directly */
+.button.button--selected {
+    color: var(--clr-primary-600);
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+
+    position: relative;
+}
+
+
+.container__bg-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+
+
+.to-do-container {
+    --_task-bg-clr: var(--clr-neutral-50);
+    --_task-primary-clr: var(--clr-neutral-700);
+    --_task-secondary-clr: var(--clr-neutral-600);
+
+    --_checkbox-size: 25px;
+    --_checkbox-border-clr: var(--clr-neutral-200);
+    --_task-placeholder-clr: var(--_task-secondary-clr);
+
+    --_block-gap: 1rem;
+
+    width: min(760px, 90%);
+    margin-top: 4rem;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header__app-title {
+    font-size: var(--fs-xl);
+    color: var(--clr-neutral-50);
+
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+}
+
+
+.task-block {
+    --_task-border-rad: 0.5rem;
+
+    padding: 1rem 1.5rem;
+    background-color: var(--_task-bg-clr);
+    border-radius: var(--_task-border-rad);
+}
+
+
+.create-task-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-block: 3rem var(--_block-gap);
+}
+
+
+.task-input {
+    flex: 1;
+    border: none;
+    background: none;
+
+    /* better align for placeholder text */
+    padding-top: 4px;
+
+    color: var(--_task-primary-clr);
+}
+
+
+.task-input::placeholder {
+    color: var(--_task-placeholder-clr)
+}
+
+
+.task-input:focus {
+    outline: none;
+}
+
+
+.add-task-btn {
+    width: var(--_checkbox-size);
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+    border: 1px solid var(--_checkbox-border-clr);
+
+    cursor: pointer;
+}
+
+
+.add-task-btn:hover {
+    border-color: transparent;
+    background-image: 
+    linear-gradient(var(--_task-bg-clr), var(--_task-bg-clr
+    )),
+    linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+
+/* take any remaining space inside the container */
+.task-content {
+    display: flex;
+}
+
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 0;
+    border-bottom: 1px solid var(--_task-secondary-clr);
+}
+
+
+.task-item:first-child {
+    border-radius: var(--_task-border-rad) var(--_task-border-rad) 0px 0px;
+}
+
+
+.task-content__task-label {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    
+    color: var(--_task-primary-clr);
+
+    cursor: pointer;
+    user-select: none;
+} 
+
+
+.task-content__checkbox {
+    width: 0;
+    opacity: 0;
+}
+
+
+.task-content__task-label::before {
+    content: "";
+
+    width: var(--_checkbox-size);
+    height: var(--_checkbox-size);
+
+    border-radius: 50%;
+    border: solid 1px var(--_checkbox-border-clr);
+}
+
+
+.task-content__task-label:hover:before {
+    /* 
+    we do gradient border this way, because only 
+    box's backgrounds are cliped to appropriate radius curve but 
+    not the border-image.
+    */
+    border-color: transparent;
+    background-image: 
+    linear-gradient(var(--_task-bg-clr), var(--_task-bg-clr
+    )),
+    linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+
+.task-content__checkbox:checked + .task-content__task-label::before {
+    content: "";
+
+    width: var(--_checkbox-size);
+    height: var(--_checkbox-size);
+
+    border-radius: 50%;
+    border: none;
+
+    background-image: 
+    url("./images/icon-check.svg"),
+    linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.task-content__checkbox:checked + .task-content__task-label {
+    text-decoration: line-through;
+    color: var(--_task-secondary-clr);
+}
+
+
+.footer {
+    --_button-gap: 1rem;
+    color: var(--_task-secondary-clr);
+
+    display: grid;
+    row-gap: var(--_block-gap);
+}
+
+
+.task-control-panel {
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 0px 0px var(--_task-border-rad) var(--_task-border-rad);
+    font-size: var(--fs-90);
+}
+
+
+.task-filter {
+    display: none;
+}
+
+
+.mobile-task-filter {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+
+@media (min-width: 700px) {
+    .task-filter {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .mobile-task-filter {
+        display: none;
+    }
+
+    .task-item__remove-task-btn {
+        display: none;
+    }
+}
+
+
+.displayed {
+    display: block;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="app.js" defer></script>
+  <script src="theme-toggle.js" defer></script>
+  
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+  <div class="container">
+    <picture class="container__bg-image" id="background-image" aria-hidden="true"> 
+      <source srcset="./images/bg-desktop-light.jpg" media="(min-width: 550px)" id="bg-image-source"> 
+      <img src="./images/bg-mobile-light.jpg" alt=""> 
+    </picture>
+
+    <div class="to-do-container">
+      <header class="header">
+        <h1 class="header__app-title fw-bold">Todo</h1>
+
+        <button class="header__switch-theme-btn button" id="toggle-theme-btn" aria-label="switch to dark theme" data-toggle-theme="dark theme"> 
+          <img src="./images/icon-moon.svg" alt=""> 
+        </button>
+      </header>
+
+      <main class="main"> 
+        <div class="create-task-container task-block"> 
+          <button class="add-task-btn button" aria-label="add task to list" id="add-task-btn"></button>
+          <input type="text" id="task-input" class="task-input" placeholder="Create a new todo...">
+        </div>
+
+        <ul class="task-list">
+        </ul>
+      </main>
+
+      <footer class="footer"> 
+        <div class="task-control-panel task-block"> 
+          <p> <span class="task-control-panel__amount" id="task-amount">0</span> items left </p>
+
+          <div class="task-filter fw-bold">
+            <button class="filter-btn button button--selected" data-filter="all">All</button>
+            <button class="filter-btn button" data-filter="active">Active</button>
+            <button class="filter-btn button" data-filter="completed">Completed</button>
+          </div>
+
+          <button class="task-control-panel__btn button" id="remove-compleated"> Clear compleated </button>
+        </div>
+
+        <div class="mobile-task-filter task-block fw-bold"> 
+          <button class="filter-btn button button--selected" data-filter="all">All</button>
+          <button class="filter-btn button" data-filter="active">Active</button>
+          <button class="filter-btn button" data-filter="completed">Completed</button>
+        </div>
+      </footer>
+      </div>
+    </div>
+  </div>
+
+  <template class="task-item-template"> 
+    <li class="task-item task-block">
+      <div class="task-content">
+          <input type="checkbox" id="task-checkbox" class="task-content__checkbox">
+          <label for="" class="task-content__task-label">
+          </label>
+      </div>
+  
+      <button class="task-item__remove-task-btn button" id="remove-task-btn">
+          <img src="./images/icon-cross.svg" alt="Remove-task"> 
+      </button>
+    </li>
+  </template>
+</body>
+</html>
