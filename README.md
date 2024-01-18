@@ -170,6 +170,8 @@ function createTask() {
 
 - [Max Programming](https://youtu.be/U693xrQKFy4?feature=shared) - Local storage in pracitce.
 
+- [Web Accessibility Education](https://youtu.be/38JDscMbB4I?feature=shared) - Aria attributes in html
+
 
 ## Author
 - Frontend Mentor - [@DaniilGurski](https://www.frontendmentor.io/profile/DaniilGurski)
