@@ -1,18 +1,18 @@
 const bgVariations = {
     darkTheme: {
-        mobile: "/images/bg-mobile-dark.jpg",
-        desktop: "/images/bg-desktop-dark.jpg"
+        mobile: "images/bg-mobile-dark.jpg",
+        desktop: "images/bg-desktop-dark.jpg"
     }, 
 
     lightTheme: {
-        mobile: "/images/bg-mobile-light.jpg",
-        desktop: "/images/bg-desktop-light.jpg"
+        mobile: "images/bg-mobile-light.jpg",
+        desktop: "images/bg-desktop-light.jpg"
     }
 }
 
 const toggleIcons = {
-    darkTheme: "./images/icon-moon.svg",
-    lightTheme: "./images/icon-sun.svg"
+    darkTheme: "images/icon-moon.svg",
+    lightTheme: "images/icon-sun.svg"
 }
 
 const documentStyles = getComputedStyle(document.documentElement);
