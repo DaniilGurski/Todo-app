@@ -5,7 +5,6 @@
 - [Overview](#overview)
   - [Features](#features)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -28,12 +27,6 @@
 ### Screenshot
 
 ![](./screenshot.png)
-
-
-### Links
-
-- Solution URL: (https://www.frontendmentor.io/solutions/responsive-and-functional-solution-using-css-grid-and-flexbox-K0koywL-sy)
-- Live Site URL: (https://daniilgurski.github.io/FM-todo/)
 
 
 ## My process
